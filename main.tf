@@ -13,7 +13,7 @@ resource "google_compute_network" "custom-vpc" {
 }
 
 resource "google_compute_subnetwork" "db-subnet" {
-  name                     = var.db_subnet
+  name                     = var.db_subne
   ip_cidr_range            = var.db_cidr
   region                   = var.gcp_region
   network                  = google_compute_network.custom-vpc.id
